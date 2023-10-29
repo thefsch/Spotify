@@ -9,7 +9,7 @@
       window.onload = () => {
         const input = document.getElementById("spotifycode");
         const button = document.getElementById("copybtn");
-        input.setAttribute("value", window.location);
+        input.setAttribute("value", ".scode " + window.location);
         button.onclick = () => {
             input.select();
             document.execCommand("copy");
