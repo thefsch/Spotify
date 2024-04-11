@@ -8,10 +8,12 @@
     <script>
       window.onload = () => {
         const input = document.getElementById("spotifycode");
+        const copiable_input = document.getElementById("spotifycode_copy");
         const button = document.getElementById("copybtn");
         input.setAttribute("value", ".scode " + window.location);
+        copiable_input.setAttribute("value", ".scode " + window.location);
         button.onclick = () => {
-            input.select();
+            copiable_input.select();
             document.execCommand("copy");
         }
       };
@@ -22,6 +24,11 @@
   >
     <div class="bg-white p-6 rounded-xl flex flex-col gap-4">
       <h1 class="font-bold text-lg">Your Spotify Authorization Code:</h1>
+       <input
+        hidden
+        value=""
+        id="spotifycode_copy"
+      />
       <input
         class="p-2 rounded-xl bg-violet-800 text-white w-full"
         disabled
