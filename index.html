@@ -8,14 +8,13 @@
     <script>
       window.onload = () => {
         const input = document.getElementById("spotifycode");
-        const copiable_input = document.getElementById("spotifycode_copy");
         const button = document.getElementById("copybtn");
         input.setAttribute("value", ".scode " + window.location);
-        copiable_input.setAttribute("value", ".scode " + window.location);
         button.onclick = () => {
-            copiable_input.select();
+            input.select();
             document.execCommand("copy");
         }
+        input.onchange = (e) => {e.target.value = ".scode " + window.location};
       };
     </script>
   </head>
